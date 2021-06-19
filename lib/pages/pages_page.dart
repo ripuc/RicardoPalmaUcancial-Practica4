@@ -116,19 +116,25 @@ class Kudos extends StatelessWidget {
         child: BottomNavigationBar(
           items: [
             BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.home, color: Colors.black54),
+                icon: Icon(
+                  Icons.home,
+                  color: Colors.grey[400],
+                  size: 40,
+                ),
                 label: ''),
             BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.search, color: Colors.black54),
+                icon: Icon(FontAwesomeIcons.search,
+                    size: 40, color: Colors.grey[400]),
+                label: ''),
+            new BottomNavigationBarItem(
+                icon: new Image.asset('assets/corazon.jpg'), label: ''),
+            BottomNavigationBarItem(
+                icon: Icon(FontAwesomeIcons.comment,
+                    size: 40, color: Colors.grey[400]),
                 label: ''),
             BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.heart, color: Colors.black54),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(FontAwesomeIcons.comment, color: Colors.black54),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person_outline, color: Colors.black54),
+                icon: Icon(Icons.person_outline,
+                    size: 40, color: Colors.grey[400]),
                 label: ''),
           ],
         ),
