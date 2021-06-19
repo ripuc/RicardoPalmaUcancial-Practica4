@@ -92,23 +92,31 @@ class CardProducto extends StatelessWidget {
                 color: Colors.transparent,
                 child: Row(
                   children: <Widget>[
-                    Icon(
-                      Icons.star,
-                      color: Colors.blue,
+                    Text(
+                      '4.6',
+                      style: TextStyle(fontSize: 12, color: Colors.black),
                     ),
                     Icon(
                       Icons.star,
                       color: Colors.blue,
+                      size: 15,
                     ),
                     Icon(
                       Icons.star,
                       color: Colors.blue,
+                      size: 15,
                     ),
                     Icon(
                       Icons.star,
                       color: Colors.blue,
+                      size: 15,
                     ),
-                    Icon(Icons.star, color: Colors.grey[500]),
+                    Icon(
+                      Icons.star,
+                      color: Colors.blue,
+                      size: 15,
+                    ),
+                    Icon(Icons.star, size: 15, color: Colors.grey[500]),
                   ],
                 ),
               ),
