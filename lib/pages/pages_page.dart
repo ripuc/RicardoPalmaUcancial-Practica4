@@ -162,6 +162,7 @@ class Kudos extends StatelessWidget {
 class Content extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final _screen = MediaQuery.of(context).size;
     return Table(
       children: [
         TableRow(children: [
@@ -178,80 +179,361 @@ class Content extends StatelessWidget {
         ]),
         TableRow(children: [
           Container(
-            child: Item(
-              color: Colors.blue,
-              icon: Icons.cached,
-              texto: 'OPCION 1',
-            ),
-          ),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              margin: EdgeInsets.all(_screen.width * 0.03),
+              height: _screen.width * 0.4,
+              width: _screen.width * 0.4,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(children: <Widget>[
+                ClipRRect(
+                  child: Row(children: [
+                    Container(
+                      child: Image(
+                        image: AssetImage('assets/horno.jpg'),
+                        height: 60,
+                        width: 60,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Microwave Oven',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '4.6',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.grey),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(Icons.star,
+                                      size: 15, color: Colors.grey[500]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Image(
+                            image: AssetImage('assets/puntos.jpg'),
+                            height: 60,
+                            width: 20,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                )
+              ])),
         ]),
         TableRow(children: [
-          Item(
-            color: Colors.red,
-            icon: Icons.double_arrow,
-            texto: 'OPCION 4',
-          ),
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              margin: EdgeInsets.all(_screen.width * 0.03),
+              height: _screen.width * 0.4,
+              width: _screen.width * 0.4,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(children: <Widget>[
+                ClipRRect(
+                  child: Row(children: [
+                    Container(
+                      child: Image(
+                        image: AssetImage('assets/licuadora.jpg'),
+                        height: 60,
+                        width: 60,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Microwave Oven',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '4.6',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.grey),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(Icons.star,
+                                      size: 15, color: Colors.grey[500]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Image(
+                            image: AssetImage('assets/puntos.jpg'),
+                            height: 60,
+                            width: 20,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                )
+              ])),
         ]),
         TableRow(children: [
-          Item(
-            color: Colors.brown,
-            icon: Icons.bus_alert,
-            texto: 'OPCION 6',
-          ),
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              margin: EdgeInsets.all(_screen.width * 0.03),
+              height: _screen.width * 0.4,
+              width: _screen.width * 0.4,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(children: <Widget>[
+                ClipRRect(
+                  child: Row(children: [
+                    Container(
+                      child: Image(
+                        image: AssetImage('assets/speaker.jpg'),
+                        height: 60,
+                        width: 60,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Microwave Oven',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '4.6',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.grey),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(Icons.star,
+                                      size: 15, color: Colors.grey[500]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Image(
+                            image: AssetImage('assets/puntos.jpg'),
+                            height: 60,
+                            width: 20,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                )
+              ])),
+        ]),
+        TableRow(children: [
+          Container(
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+              margin: EdgeInsets.all(_screen.width * 0.03),
+              height: _screen.width * 0.4,
+              width: _screen.width * 0.4,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color.fromRGBO(255, 255, 255, 1),
+              ),
+              child: Column(children: <Widget>[
+                ClipRRect(
+                  child: Row(children: [
+                    Container(
+                      child: Image(
+                        image: AssetImage('assets/aire.jpg'),
+                        height: 60,
+                        width: 60,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Row(
+                            children: [
+                              Row(
+                                children: [
+                                  Text(
+                                    'Microwave Oven',
+                                    style: TextStyle(
+                                        fontSize: 15, color: Colors.grey),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    '4.6',
+                                    style: TextStyle(
+                                        fontSize: 12, color: Colors.grey),
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(
+                                    Icons.star,
+                                    color: Colors.blue,
+                                    size: 15,
+                                  ),
+                                  Icon(Icons.star,
+                                      size: 15, color: Colors.grey[500]),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Expanded(child: Container()),
+                    Column(
+                      children: [
+                        Container(
+                          child: Image(
+                            image: AssetImage('assets/puntos.jpg'),
+                            height: 60,
+                            width: 20,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+                )
+              ])),
         ]),
       ],
-    );
-  }
-}
-
-class Item extends StatelessWidget {
-  final Color color;
-  final IconData icon;
-  final String texto;
-
-  const Item({Key key, this.color, this.icon, this.texto}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final _screen = MediaQuery.of(context).size;
-    return Container(
-      margin: EdgeInsets.all(_screen.width * 0.03),
-      height: _screen.width * 0.4,
-      width: _screen.width * 0.4,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
-        color: Color.fromRGBO(255, 255, 255, 1),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              SizedBox(
-                height: 5,
-              ),
-              CircleAvatar(
-                radius: 30,
-                backgroundColor: this.color,
-                child: Icon(
-                  this.icon,
-                  color: Colors.white,
-                  size: 30,
-                ),
-              ),
-              Text(
-                this.texto,
-                style: TextStyle(color: this.color),
-              ),
-              SizedBox(
-                height: 5,
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
