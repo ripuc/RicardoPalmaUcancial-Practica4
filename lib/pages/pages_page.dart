@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:practica4/pages/card_producto.dart';
 
 class PagesPage extends StatelessWidget {
   @override
@@ -53,36 +54,42 @@ class Header extends StatelessWidget {
   }
 }
 
+_bodyProduct({BuildContext context}) => Container(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
+      height: MediaQuery.of(context).size.height * 0.30,
+
+      // alignment: Alignment.center,
+      child: CardProducto(
+        width: MediaQuery.of(context).size.width * 0.80,
+        height: 40,
+      ),
+    );
+
 class Head extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 15),
       child: Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
-        RotatedBox(
-          quarterTurns: 1,
-          child: Icon(
-            Icons.bar_chart,
-            color: Colors.black54,
-            size: 50,
-          ),
-        ),
+        Container(
+            child: Text(
+          'favourites',
+          style: TextStyle(
+              color: Colors.black87, fontSize: 25, fontWeight: FontWeight.bold),
+        )),
         Expanded(child: Container()),
-        Center(
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(20),
+            color: Colors.blue[800],
+          ),
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
           child: Text(
-            'Kudos',
+            'VIEW ALL',
             style: TextStyle(
-                color: Colors.black87,
-                fontSize: 35,
-                fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
           ),
-        ),
-        Expanded(child: Container()),
-        Icon(
-          Icons.copy,
-          color: Colors.black87,
-          size: 50,
-        ),
+        )
       ]),
     );
   }
@@ -101,7 +108,16 @@ class Kudos extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [Header(), Head(), Content()],
+                children: [
+                  Header(),
+                  Head(),
+                  Positioned(
+                    bottom: MediaQuery.of(context).size.height * 0.08,
+                    left: MediaQuery.of(context).size.width * 0.04,
+                    child: _bodyProduct(context: context),
+                  ),
+                  Content()
+                ],
               ),
             ),
           ),
